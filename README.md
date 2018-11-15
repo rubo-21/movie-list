@@ -8,13 +8,16 @@ Movie list application implemented with Angular 7 and NgRx (Redux implementation
  - List of featured movies
  - Details page for certain movie
  - Search
+ - Search autocomplete (for browsers which support [datalist](https://caniuse.com/#feat=datalist))
  - Filter by genre
  - Responsive design
 
 ### Technologies used
  - Angular stack (Latest version of Angular, RxJS, Typescript)
- - SASS (SCSS)
+ - Redux
  - NgRx
+ - SASS (SCSS)
+ - BEM
 
 As this is standalone frontend app movie data is hardcoded in store's initial state
 
