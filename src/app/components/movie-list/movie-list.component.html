@@ -6,7 +6,7 @@
 		<app-search [autocomplete]="searchAutoComplete" (input)="filterByName($event)"></app-search>
 	</div>
 	<div class="b-movie-list__filter">
-		<select [(ngModel)]="selectedGenre" (change)="filterByGenre($event)" name="genre">
+		<select [(ngModel)]="selectedGenre" (change)="filterByGenre()" name="genre">
 			<option value="all">Select Genre (All)</option>
 			<option *ngFor="let genre of genres" value="{{genre | lowercase}}">{{genre}}</option>
 		</select>

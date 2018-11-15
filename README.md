@@ -2,6 +2,8 @@
 
 Movie list application implemented with Angular 7 and NgRx (Redux implementation for Angular).
 
+#### [Live demo](https://the-movie-list-app.firebaseapp.com)
+
 ### Key features
  - List of featured movies
  - Details page for certain movie
