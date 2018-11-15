@@ -1,0 +1,8 @@
+<div class="b-movie">
+	<img class="b-movie__cover" routerLink="/movie/{{movie.key}}/{{movie.id}}" src="assets/images/covers/{{movie.img}}" alt="Movie cover" />
+	<h3 class="b-movie__genres">{{ movie.genres.join(', ') }}</h3>
+	<h4 class="b-movie__title"><span>{{movie.name}}</span></h4>
+	<hr class="b-movie__separator" />
+	<p class="b-movie__rate">Rate: &#9733; {{movie.rate}}</p>
+	<a class="b-movie__button" routerLink="/movie/{{movie.key}}/{{movie.id}}">View Details</a>
+</div>

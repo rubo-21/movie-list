@@ -1,0 +1,20 @@
+<div class="b-movie-list">
+	<div class="b-movie-list__title">
+		<h2>Featured Movies</h2>
+	</div>
+	<div class="b-movie-list__search">
+		<app-search [autocomplete]="searchAutoComplete" (input)="filterByName($event)"></app-search>
+	</div>
+	<div class="b-movie-list__filter">
+		<select [(ngModel)]="selectedGenre" (change)="filterByGenre($event)" name="genre">
+			<option value="all">Select Genre (All)</option>
+			<option *ngFor="let genre of genres" value="{{genre | lowercase}}">{{genre}}</option>
+		</select>
+	</div>
+	<div *ngIf="isLoading" class="b-movie-list__loading">Loading....</div>
+	<div *ngIf="!isLoading" class="b-movie-list__content">
+		<div *ngFor="let movie of movies" class="b-movie-list__item">
+			<app-movie [movie]="movie"></app-movie>
+		</div>
+	</div>
+</div>

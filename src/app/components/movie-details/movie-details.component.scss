@@ -1,0 +1,121 @@
+@import "../../../variables.scss";
+
+.b-movie-details {
+	padding: 0 30px 40px;
+	margin: auto;
+
+	@media screen and (min-width: 1023px) {
+		padding: 0 20px;
+		max-width: 90%;
+	}
+
+	&__breadcrumb {
+		margin-bottom: 15px;
+		font-size: .7em;
+		color: $secondary-text-color;
+
+		& a {
+			border-bottom: 1px solid $secondary-text-color;
+			color: $secondary-text-color;
+		}
+
+		& span {
+			font-size: 1.2em;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 20px 20px;
+		border-radius: 4px;
+		box-shadow: 0 15px 35px rgba($primary-text-color, .1), 0 5px 15px rgba($black, .07);
+		transition: .6s ease;
+		background: $white;
+	}
+
+	&__sidebar {
+		position: relative;
+		flex: 50%;
+		padding: 15px 30px;
+
+		&:last-child {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 70%;
+				height: 1px;
+				background: $divider-color;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__cover {
+		text-align: center;
+
+		@media screen and (min-width: 767px) {
+			text-align: left;
+		}
+	}
+
+	&__genres {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 20px 0;
+
+		& a {
+			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 8px 10px;
+			background: $primary-color-light;
+			transition: all 0.2s;
+			letter-spacing: 1px;
+			font-size: 10px;
+			font-variant: small-caps;
+			color: $black;
+
+			&:hover {
+				background: $primary-color-dark;
+				color: $white;
+			}
+
+			&::last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__rate {
+		margin-top: 15px;
+	}
+
+	&__duration {
+		margin-top: 3px;
+	}
+
+	&__rate,
+	&__duration {
+		font-weight: 400;
+		font-size: .9rem;
+		line-height: 1.25rem;
+		color: $secondary-text-color;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		@extend %headline-font;
+		font-size: 2.2rem;
+		letter-spacing: 1px;
+		color: $primary-text-color;
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: .9rem;
+		line-height: 1.25rem;
+		color: $secondary-text-color;
+	}
+}

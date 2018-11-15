@@ -1,0 +1,10 @@
+<div class="b-search">
+	<div class="b-search__line">
+		<input (keyup)="onInput($event)" type="text" class="b-search__input" list="autocomplete" placeholder="Search..." />
+		<button type="submit" class="b-search__button">Search</button>
+
+		<datalist id="autocomplete">
+			<option *ngFor="let item of autocomplete" value="{{item}}">
+		</datalist>
+	</div>
+</div>

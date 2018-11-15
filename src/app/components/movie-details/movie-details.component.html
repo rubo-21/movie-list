@@ -1,0 +1,21 @@
+<div class="b-movie-details">
+	<div class="b-movie-details__breadcrumb">
+		<a [routerLink]="['/']">home</a> <span> &rarr;</span> {{ movie.key }}
+	</div>
+	<div class="b-movie-details__content">
+		<div class="b-movie-details__sidebar">
+			<div class="b-movie-details__cover"><img src="assets/images/covers/{{movie.img}}" /></div>
+			<div class="b-movie-details__rate">&#9733; {{movie.rate}}</div>
+			<div class="b-movie-details__duration">Duration: {{movie.length}}</div>
+		</div>
+		<div class="b-movie-details__sidebar">
+			<div class="b-movie-details__title">
+				<h2>{{movie.name}}</h2>
+			</div>
+			<div class="b-movie-details__description">{{movie.description}}</div>
+			<div class="b-movie-details__genres">
+				<a *ngFor="let genre of movie.genres" [routerLink]="['/']" [queryParams]="{genre: genre}">{{genre}}</a>
+			</div>
+		</div>
+	</div>
+</div>

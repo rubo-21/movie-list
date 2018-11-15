@@ -1,0 +1,46 @@
+@import "../../../variables.scss";
+.b-search {
+    &__line {
+        display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+    &__input {
+		min-width: 70%;
+		flex-grow: 1;
+		margin: 0 5px 10px;
+        padding: 10px;
+		border: 1px solid $black;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+	}
+
+    &__button {
+        min-width: 100px;
+		flex-grow: 1;
+		margin: 0 5px 10px;
+		padding: 10px;
+		border: none;
+		border-radius: 4px;
+        background: $accent-color;
+		transition: all 0.3s;
+		cursor: pointer;
+		text-align: center;
+		text-transform: uppercase;
+		@extend %regular-font;
+		font-size: .8em;
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            background: darken($accent-color, 25%);
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../../variables.scss";
+
+.b-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 15vh;
+	max-height: 25vh;
+	background: $primary-color;
+	@extend %headline-font;
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: .7rem;
+
+	& a,
+	& a:link  {
+		color: $white;
+	}
+}

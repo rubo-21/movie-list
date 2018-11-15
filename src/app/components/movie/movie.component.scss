@@ -1,0 +1,96 @@
+@import "../../../variables.scss";
+$color-shadow: transparentize(#303336, .9);
+
+.b-movie {
+	user-select: none;
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px 20px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba($primary-text-color, .1), 0 5px 15px rgba($black, .07);
+	transition: .6s ease;
+	background: $white;
+	text-align: center;
+
+	&:hover {
+		box-shadow: 0 18px 35px rgba($primary-text-color, .1), 0 8px 15px rgba($black, .07);
+ 	 	transform: translateY(-1px);
+	}
+
+	&__cover {
+		max-width: 100%;
+		max-height: 100%;
+		margin-bottom: 2vh;
+		border-radius: 4px 4px 0 0;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		min-height: 100px;
+		margin: 2vh 0 15px;
+		@extend %headline-font;
+		font-size: 2.2rem;
+  		color: $primary-text-color;
+  		letter-spacing: 1px;
+
+		span{
+			align-self: center;
+		}
+	}
+
+	&__genres {
+		margin-bottom: 10px;
+		font-size: .4rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: $secondary-text-color;
+	}
+
+	&__separator {
+		width: 50%;
+		margin: 0 auto 3vh;
+		border: 0;
+		border-bottom: 1px solid $divider-color;
+	}
+
+	&__rate {
+		margin: 2vh 0;
+		padding-bottom: 1vh;
+		text-align: center;
+		@extend %headline-font;
+		font-weight: 400;
+		font-size: .9rem;
+		line-height: 1.25rem;
+		color: $secondary-text-color;
+	}
+
+	&__button {
+		display: inline-block;
+		padding: 1vh 2vh;
+		background: $accent-color;
+		border-radius: 4px;
+		box-shadow: 0 0px 0px $color-shadow, 0 0px 0px rgba($black, 0);
+		cursor: pointer;
+		line-height: 20px;
+		font-size: .8rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: .02rem;
+		color: $white;
+
+		&:hover {
+			background: lighten($accent-color, 25%);
+			box-shadow: 0 7px 14px $color-shadow, 0 3px 6px rgba($black, .08);
+			transform: translateY(-1px);
+		}
+
+		&::active {
+			box-shadow: 0 4px 6px $color-shadow, 0 1px 3px rgba($black, .12);
+			transform: translateY(1px);
+		}
+	}
+}
