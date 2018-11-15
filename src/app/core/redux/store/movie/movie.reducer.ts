@@ -404,7 +404,8 @@ export function movieReducer(state = initialState, action: movieActions.Actions)
 			const movies: Movie[] = state.allMovies.filter(movie => {
 				const targetProp = movie[target];
 				const source = forceLowerCase && typeof targetProp === 'string' ? targetProp.toLowerCase() : targetProp;
-				return source.indexOf(comparator) > -1;
+				const search = forceLowerCase ? comparator.toLowerCase() : comparator;
+				return source.indexOf(search) > -1;
 			});
 
 			return {
